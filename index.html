@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpeakerAI — Your AI Personal Assistant for Speakers</title>
+  <meta name="description" content="SpeakerAI is the all-in-one AI-powered platform for professional speakers. Get booked, speak better, grow your brand, and run your speaking business on autopilot." />
+  <meta property="og:title" content="SpeakerAI — Your AI Personal Assistant for Speakers" />
+  <meta property="og:description" content="Land more gigs, craft better speeches, and build your speaking empire with AI." />
+  <meta property="og:image" content="https://speakerai.co/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">SpeakerAI</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#for-events">For Events</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#beta" class="btn btn-ghost">Log in</a>
+      <a href="#beta" class="btn btn-primary">Get Early Access</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#for-events">For Events</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#beta" class="btn btn-primary" style="text-align:center;margin-top:8px">Get Early Access</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Now in Beta — Invite-Only Access
+    </div>
+    <h1 class="hero-title">
+      Your AI Personal Assistant<br />
+      <span class="gradient-text">Built for Speakers</span>
+    </h1>
+    <p class="hero-sub">
+      SpeakerAI is the all-in-one platform that helps professional speakers land more gigs,
+      craft world-class speeches, build their brand, and run their entire speaking business —
+      powered by AI.
+    </p>
+    <div class="hero-actions">
+      <a href="#beta" class="btn btn-hero">Join the Beta <span class="arrow">→</span></a>
+      <a href="#features" class="btn btn-ghost-hero">See Features</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">10x</span>
+        <span class="stat-label">More Gig Opportunities</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">3 min</span>
+        <span class="stat-label">To Generate a Full Pitch</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">AI-First</span>
+        <span class="stat-label">Speaker Intelligence Platform</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Mockup -->
+  <div class="dashboard-preview">
+    <div class="container">
+      <div class="mockup-wrapper">
+        <div class="mockup-chrome">
+          <div class="chrome-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="chrome-url">app.speakerai.co/dashboard</span>
+        </div>
+        <div class="mockup-screen">
+          <div class="dash-sidebar">
+            <div class="dash-logo">⚡ SpeakerAI</div>
+            <nav class="dash-nav">
+              <a class="dash-link active">🏠 Dashboard</a>
+              <a class="dash-link">🎤 My Gigs</a>
+              <a class="dash-link">✍️ Speech Builder</a>
+              <a class="dash-link">🎯 Event Matches</a>
+              <a class="dash-link">📈 Brand Studio</a>
+              <a class="dash-link">🎬 Video Coach</a>
+              <a class="dash-link">🤖 AI Assistant</a>
+            </nav>
+          </div>
+          <div class="dash-main">
+            <div class="dash-header">
+              <div>
+                <h3>Good morning, Alex 👋</h3>
+                <p>You have 4 new event match opportunities</p>
+              </div>
+              <button class="dash-cta-btn">+ New Pitch</button>
+            </div>
+            <div class="dash-cards">
+              <div class="dash-card green">
+                <div class="card-icon">🎯</div>
+                <div class="card-info">
+                  <span class="card-val">12</span>
+                  <span class="card-label">Event Matches</span>
+                </div>
+              </div>
+              <div class="dash-card blue">
+                <div class="card-icon">📋</div>
+                <div class="card-info">
+                  <span class="card-val">3</span>
+                  <span class="card-label">Active Pitches</span>
+                </div>
+              </div>
+              <div class="dash-card purple">
+                <div class="card-icon">🎤</div>
+                <div class="card-info">
+                  <span class="card-val">$24k</span>
+                  <span class="card-label">Pipeline Value</span>
+                </div>
+              </div>
+              <div class="dash-card orange">
+                <div class="card-icon">⭐</div>
+                <div class="card-info">
+                  <span class="card-val">94%</span>
+                  <span class="card-label">Speaker Score</span>
+                </div>
+              </div>
+            </div>
+            <div class="dash-ai-bar">
+              <span class="ai-pulse"></span>
+              <span>AI Insight: <em>Your "Leadership in Crisis" speech has a 89% match with 5 upcoming Fortune 500 events. Want me to auto-draft pitches?</em></span>
+              <button class="ai-bar-btn">Yes, do it →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS / SOCIAL PROOF -->
+<section class="logos-section">
+  <div class="container">
+    <p class="logos-label">Speakers trusted by audiences at</p>
+    <div class="logos-row">
+      <span class="logo-pill">TED</span>
+      <span class="logo-pill">SXSW</span>
+      <span class="logo-pill">Forbes Summit</span>
+      <span class="logo-pill">Google I/O</span>
+      <span class="logo-pill">Web Summit</span>
+      <span class="logo-pill">AWS re:Invent</span>
+      <span class="logo-pill">Salesforce Dreamforce</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-label">Everything You Need</div>
+    <h2 class="section-title">Your complete AI-powered<br /><span class="gradient-text">speaking business hub</span></h2>
+    <p class="section-sub">From crafting your first speech to landing six-figure keynotes, SpeakerAI has every tool, insight, and automation you need to go from good speaker to world-class speaker.</p>
+
+    <div class="features-grid">
+
+      <div class="feature-card feature-card--large">
+        <div class="feature-icon-wrap purple">🎯</div>
+        <h3>Smart Event Matchmaking</h3>
+        <p>Our AI continuously scans thousands of conferences, summits, and events — then matches you based on your topics, style, audience fit, and speaker fee. Get ranked opportunities delivered daily.</p>
+        <ul class="feature-list">
+          <li>Real-time event discovery across 50k+ events/year</li>
+          <li>Fit score: topic match, audience, budget, location</li>
+          <li>One-click pitch generation per matched event</li>
+          <li>Auto-follow-up sequences powered by AI</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap blue">✍️</div>
+        <h3>AI Speech Builder</h3>
+        <p>Draft, structure, and refine world-class speeches with AI trained on the best keynotes in the world. From outline to full script in minutes.</p>
+        <ul class="feature-list">
+          <li>Expert speech frameworks built-in</li>
+          <li>Storytelling AI + emotional arc analysis</li>
+          <li>Tone, pacing &amp; audience customization</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap green">🎬</div>
+        <h3>AI Video Coach</h3>
+        <p>Upload your talks and our AI analyzes your delivery — filler words, pacing, eye contact, body language, energy — and gives you a personalized coaching plan.</p>
+        <ul class="feature-list">
+          <li>Filler word detection &amp; elimination plan</li>
+          <li>Energy curve &amp; pacing analysis</li>
+          <li>Side-by-side comparison to top speakers</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap orange">📈</div>
+        <h3>Brand Studio</h3>
+        <p>Build, manage, and elevate your speaker brand. Get AI-generated bios, speaker kits, social content, and a full positioning strategy.</p>
+        <ul class="feature-list">
+          <li>Auto-generated speaker one-sheet & media kit</li>
+          <li>Social content calendar + ghostwriting</li>
+          <li>Brand positioning & niche refinement</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap pink">🤖</div>
+        <h3>Expert Speech Bots</h3>
+        <p>Tap into specialized AI brains trained by world-class speech coaches, TEDx veterans, and industry thought leaders — on demand, 24/7.</p>
+        <ul class="feature-list">
+          <li>TED-style talk coach bot</li>
+          <li>Corporate keynote strategist bot</li>
+          <li>Pitch & sales presentation bot</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap teal">💼</div>
+        <h3>Business Dashboard</h3>
+        <p>Manage your full speaking pipeline — bookings, contracts, fees, follow-ups, invoicing, and calendar — all in one place.</p>
+        <ul class="feature-list">
+          <li>CRM for events & contacts</li>
+          <li>Fee tracking & negotiation insights</li>
+          <li>Automated follow-up sequences</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap yellow">📣</div>
+        <h3>Marketing AI</h3>
+        <p>Let AI run your speaker marketing. Auto-generate thought leadership content, LinkedIn posts, podcast pitches, and press releases.</p>
+        <ul class="feature-list">
+          <li>AI LinkedIn ghostwriter for speakers</li>
+          <li>Podcast guest pitch generator</li>
+          <li>Press release & PR automation</li>
+        </ul>
+      </div>
+
+      <div class="feature-card feature-card--highlight">
+        <div class="feature-icon-wrap white">🧠</div>
+        <h3>Speaker Intelligence Engine</h3>
+        <p>Your AI learns from every speech, pitch, and booking — getting smarter over time to give you hyper-personalized recommendations and career roadmaps.</p>
+        <ul class="feature-list">
+          <li>Personalized career roadmap</li>
+          <li>Fee benchmarking vs. peers</li>
+          <li>Topic trend forecasting</li>
+          <li>Reputation &amp; visibility score</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <div class="section-label">Simple to Start</div>
+    <h2 class="section-title">From sign-up to booked<br /><span class="gradient-text">in under a week</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Build Your Speaker Profile</h3>
+          <p>Answer a few questions or upload your existing bio and talks. SpeakerAI automatically builds your speaker profile, identifies your niche, and sets your positioning.</p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Get Matched with Events</h3>
+          <p>Our matching engine goes to work — surfacing conferences, summits, and corporate events that are a perfect fit. Ranked by likelihood of booking, fee alignment, and topic relevance.</p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Send AI-Crafted Pitches</h3>
+          <p>With one click, generate a personalized pitch letter for any event. Your AI assistant handles follow-ups, objection responses, and negotiation support.</p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Deliver & Level Up</h3>
+          <p>After every event, upload your video. The AI analyzes your performance, identifies improvement areas, and gives you a coaching plan to keep elevating your craft.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR EVENTS -->
+<section class="for-events" id="for-events">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-text">
+        <div class="section-label light">For Event Organizers</div>
+        <h2 class="section-title white">Find the perfect<br /><span class="gradient-text-light">speaker in minutes</span></h2>
+        <p class="section-sub light">Create a free event organizer account and instantly access thousands of vetted speakers — filtered by topic, style, budget, location, and audience fit.</p>
+        <ul class="event-features-list">
+          <li>
+            <span class="ef-icon">🔍</span>
+            <div>
+              <strong>AI-Powered Speaker Search</strong>
+              <p>Describe your event and let AI find the best speaker matches instantly.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ef-icon">💬</span>
+            <div>
+              <strong>Direct Messaging & Booking</strong>
+              <p>Connect, negotiate, and book speakers all in one place with built-in contracts.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ef-icon">⭐</span>
+            <div>
+              <strong>Verified Reviews & Reels</strong>
+              <p>Every speaker has verified talk recordings, audience ratings, and past event history.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ef-icon">💡</span>
+            <div>
+              <strong>Budget Intelligence</strong>
+              <p>Get transparent fee benchmarking so you always know you're getting a fair deal.</p>
+            </div>
+          </li>
+        </ul>
+        <a href="#beta" class="btn btn-white">Sign Up as an Event Organizer →</a>
+      </div>
+      <div class="col-visual">
+        <div class="event-card-mockup">
+          <div class="ecm-header">
+            <h4>🔍 Find Speakers for Your Event</h4>
+          </div>
+          <div class="ecm-search">
+            <input type="text" placeholder='e.g. "AI leadership for tech conference"' readonly />
+            <button>Search</button>
+          </div>
+          <div class="ecm-results">
+            <div class="ecm-speaker">
+              <div class="ecm-avatar">JR</div>
+              <div class="ecm-info">
+                <strong>Jordan Reid</strong>
+                <span>Leadership & AI Strategy</span>
+              </div>
+              <div class="ecm-score">98% match</div>
+            </div>
+            <div class="ecm-speaker">
+              <div class="ecm-avatar">MC</div>
+              <div class="ecm-info">
+                <strong>Maya Chen</strong>
+                <span>Future of Work & Innovation</span>
+              </div>
+              <div class="ecm-score">95% match</div>
+            </div>
+            <div class="ecm-speaker">
+              <div class="ecm-avatar">DK</div>
+              <div class="ecm-info">
+                <strong>Dev Kumar</strong>
+                <span>Tech Entrepreneurship</span>
+              </div>
+              <div class="ecm-score">91% match</div>
+            </div>
+          </div>
+          <button class="ecm-cta">Book Now — Free to List</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-label">Early Users Love It</div>
+    <h2 class="section-title">What speakers are saying</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"SpeakerAI helped me go from 2 gigs a year to 14 in under 6 months. The event matchmaking is like having a full-time booking agent."</p>
+        <div class="testimonial-author">
+          <div class="t-avatar">SL</div>
+          <div>
+            <strong>Sarah L.</strong>
+            <span>Keynote Speaker, Leadership & DEI</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"I used to dread writing pitch emails. Now the AI writes them for me, follows up, and I just show up to close the deal. It's insane."</p>
+        <div class="testimonial-author">
+          <div class="t-avatar">MR</div>
+          <div>
+            <strong>Marcus R.</strong>
+            <span>Tech Entrepreneur & Conference Speaker</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"The video coach told me I say 'um' 47 times per talk. Two months later I'm down to under 5. My speaker scores went through the roof."</p>
+        <div class="testimonial-author">
+          <div class="t-avatar">AT</div>
+          <div>
+            <strong>Aisha T.</strong>
+            <span>Corporate Trainer & Speaker</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-label">Simple Pricing</div>
+    <h2 class="section-title">Invest in your<br /><span class="gradient-text">speaking career</span></h2>
+    <p class="section-sub">Start free. Upgrade as you grow. Every plan pays for itself with a single booking.</p>
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <div class="pricing-label">Starter</div>
+        <div class="pricing-price">Free<span>/forever</span></div>
+        <p class="pricing-desc">Perfect for speakers just getting started and building their profile.</p>
+        <ul class="pricing-features">
+          <li>✓ Speaker profile &amp; media kit</li>
+          <li>✓ 5 event matches/month</li>
+          <li>✓ 3 AI pitch drafts/month</li>
+          <li>✓ Basic speech templates</li>
+          <li>✓ Event organizer marketplace listing</li>
+        </ul>
+        <a href="#beta" class="btn btn-outline-dark">Get Started Free</a>
+      </div>
+
+      <div class="pricing-card pricing-card--featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-label">Pro</div>
+        <div class="pricing-price">$79<span>/month</span></div>
+        <p class="pricing-desc">For serious speakers ready to scale their bookings and revenue.</p>
+        <ul class="pricing-features">
+          <li>✓ Unlimited event matches</li>
+          <li>✓ Unlimited AI pitch generation</li>
+          <li>✓ Full AI Speech Builder</li>
+          <li>✓ Video Coach (5 uploads/mo)</li>
+          <li>✓ Brand Studio + social content</li>
+          <li>✓ Expert speech bots access</li>
+          <li>✓ CRM &amp; pipeline management</li>
+          <li>✓ Priority matching &amp; visibility</li>
+        </ul>
+        <a href="#beta" class="btn btn-primary">Start 14-Day Free Trial</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-label">Agency</div>
+        <div class="pricing-price">$299<span>/month</span></div>
+        <p class="pricing-desc">For speaker bureaus and talent management agencies.</p>
+        <ul class="pricing-features">
+          <li>✓ Everything in Pro</li>
+          <li>✓ Up to 20 speaker profiles</li>
+          <li>✓ Agency dashboard &amp; analytics</li>
+          <li>✓ White-label client portal</li>
+          <li>✓ API access</li>
+          <li>✓ Dedicated account manager</li>
+          <li>✓ Custom integrations</li>
+        </ul>
+        <a href="#beta" class="btn btn-outline-dark">Contact Sales</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BETA SIGNUP -->
+<section class="beta" id="beta">
+  <div class="container">
+    <div class="beta-card">
+      <div class="beta-orb beta-orb-1"></div>
+      <div class="beta-orb beta-orb-2"></div>
+      <div class="beta-label">Beta Access</div>
+      <h2>Be among the first<br /><span class="gradient-text">to transform your speaking career</span></h2>
+      <p>We're onboarding our first 500 speakers. Join the waitlist and get 3 months of Pro free when we launch.</p>
+      <form class="beta-form" id="betaForm">
+        <div class="beta-inputs">
+          <input type="text" placeholder="Your full name" id="betaName" required />
+          <input type="email" placeholder="Your email address" id="betaEmail" required />
+          <select id="betaRole">
+            <option value="">I am a...</option>
+            <option value="speaker">Professional Speaker</option>
+            <option value="aspiring">Aspiring Speaker</option>
+            <option value="event">Event Organizer</option>
+            <option value="agency">Speaker Bureau / Agency</option>
+            <option value="coach">Speech Coach</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-hero">
+          <span id="betaBtnText">Join the Beta Waitlist →</span>
+        </button>
+      </form>
+      <div class="beta-success" id="betaSuccess">
+        <div class="success-icon">🎉</div>
+        <h3>You're on the list!</h3>
+        <p>We'll email you as soon as your spot is ready. Check your inbox for a confirmation + early access resources.</p>
+      </div>
+      <p class="beta-note">No spam. No credit card. Just early access to the future of professional speaking.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">SpeakerAI</span>
+        </a>
+        <p>The AI personal assistant built exclusively for professional speakers.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter/X">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">📸</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#beta">Beta Access</a>
+        </div>
+        <div class="footer-col">
+          <h5>For Speakers</h5>
+          <a href="#">Speech Builder</a>
+          <a href="#">Event Matchmaking</a>
+          <a href="#">Video Coach</a>
+          <a href="#">Brand Studio</a>
+        </div>
+        <div class="footer-col">
+          <h5>For Events</h5>
+          <a href="#">Find Speakers</a>
+          <a href="#">Organizer Login</a>
+          <a href="#">Post an Event</a>
+          <a href="#">Enterprise</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 SpeakerAI, Inc. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

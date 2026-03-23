@@ -24,9 +24,13 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           npm install -g wrangler 2>/dev/null
-          wrangler --version
-          OUTPUT=$(wrangler pages deploy . --project-name speakerai --commit-dirty=true 2>&1) && echo "$OUTPUT" || {
-            echo "$OUTPUT"
-            echo "::error title=Wrangler Deploy Failed::$OUTPUT"
-            exit 1
-          }
+          wrangler pages deploy . --project-name speakerai --commit-dirty=true 2>&1 | tee /tmp/deploy_output.txt
+          echo "EXIT: ${PIPESTATUS[0]}" >> /tmp/deploy_output.txt
+
+      - name: Upload deploy log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: deploy-log
+          path: /tmp/deploy_output.txt
+          retention-days: 1

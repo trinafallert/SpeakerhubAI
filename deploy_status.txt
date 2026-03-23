@@ -1,0 +1,13 @@
+
+ ⛅️ wrangler 4.76.0
+───────────────────
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mA request to the Cloudflare API (/memberships) failed.[0m
+
+  Authentication failed (status: 400) [code: 9106]
+  
+  If you think this is a bug, please open an issue at: [4mhttps://github.com/cloudflare/workers-sdk/issues/new/choose[0m
+
+
+🪵  Logs were written to "/home/runner/.config/.wrangler/logs/wrangler-2026-03-23_10-57-40_034.log"
+exit=1

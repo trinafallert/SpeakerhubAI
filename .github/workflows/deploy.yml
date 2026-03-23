@@ -22,6 +22,20 @@ jobs:
       - name: Deploy to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install -g wrangler 2>/dev/null
-          wrangler pages deploy . --project-name speakerai --commit-dirty=true
+          OUTPUT=$(wrangler pages deploy . --project-name speakerai --commit-dirty=true 2>&1)
+          echo "$OUTPUT"
+          URL=$(echo "$OUTPUT" | grep -oE 'https://[a-zA-Z0-9._-]+\.pages\.dev[^ ]*' | head -1)
+          echo "Deployment URL: $URL"
+          curl -s -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"name\":\"DEPLOYMENT_URL\",\"value\":\"${URL}\"}" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/variables" || \
+          curl -s -X PATCH \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"value\":\"${URL}\"}" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/variables/DEPLOYMENT_URL"

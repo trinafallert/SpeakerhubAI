@@ -12,6 +12,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -22,20 +24,19 @@ jobs:
       - name: Deploy to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npm install -g wrangler 2>/dev/null
-          OUTPUT=$(wrangler pages deploy . --project-name speakerai --commit-dirty=true 2>&1)
-          echo "$OUTPUT"
-          URL=$(echo "$OUTPUT" | grep -oE 'https://[a-zA-Z0-9._-]+\.pages\.dev[^ ]*' | head -1)
-          echo "Deployment URL: $URL"
-          curl -s -X POST \
-            -H "Authorization: Bearer $GH_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d "{\"name\":\"DEPLOYMENT_URL\",\"value\":\"${URL}\"}" \
-            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/variables" || \
-          curl -s -X PATCH \
-            -H "Authorization: Bearer $GH_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d "{\"value\":\"${URL}\"}" \
-            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/variables/DEPLOYMENT_URL"
+          set +e
+          npm install -g wrangler 2>&1
+          DEPLOY_OUT=$(wrangler pages deploy . --project-name speakerai --commit-dirty=true 2>&1)
+          DEPLOY_EXIT=$?
+          echo "=== WRANGLER OUTPUT ==="
+          echo "$DEPLOY_OUT"
+          echo "=== EXIT: $DEPLOY_EXIT ==="
+          echo "$DEPLOY_OUT" > deploy_status.txt
+          echo "exit=$DEPLOY_EXIT" >> deploy_status.txt
+          git config user.email "ci@speakerai"
+          git config user.name "CI"
+          git add deploy_status.txt
+          git diff --cached --quiet || git commit -m "ci: deploy status [skip ci]"
+          git push origin HEAD || true
+          exit $DEPLOY_EXIT

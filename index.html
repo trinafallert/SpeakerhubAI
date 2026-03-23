@@ -23,6 +23,7 @@
     </a>
     <div class="nav-links">
       <a href="#features">Features</a>
+      <a href="#speech-analyzer">Speech Analyzer</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#for-events">For Events</a>
       <a href="#pricing">Pricing</a>
@@ -37,6 +38,7 @@
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#features">Features</a>
+    <a href="#speech-analyzer">Speech Analyzer</a>
     <a href="#how-it-works">How It Works</a>
     <a href="#for-events">For Events</a>
     <a href="#pricing">Pricing</a>
@@ -105,9 +107,9 @@
               <a class="dash-link active">🏠 Dashboard</a>
               <a class="dash-link">🎤 My Gigs</a>
               <a class="dash-link">✍️ Speech Builder</a>
+              <a class="dash-link">📊 Speech Analyzer</a>
               <a class="dash-link">🎯 Event Matches</a>
               <a class="dash-link">📈 Brand Studio</a>
-              <a class="dash-link">🎬 Video Coach</a>
               <a class="dash-link">🤖 AI Assistant</a>
             </nav>
           </div>
@@ -276,6 +278,119 @@
         </ul>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- SPEECH ANALYZER -->
+<section class="speech-analyzer" id="speech-analyzer">
+  <div class="container">
+    <div class="section-label">AI-Powered Analysis</div>
+    <h2 class="section-title">Analyze every speech.<br /><span class="gradient-text">Improve every delivery.</span></h2>
+    <p class="section-sub">Upload a recording or paste your script — SpeakerAI instantly breaks down your delivery across 10+ dimensions, pinpoints every filler word, and gives you a personalized coaching plan to level up fast.</p>
+
+    <div class="analyzer-layout">
+      <!-- Left: Controls -->
+      <div class="analyzer-input-panel">
+        <div class="analyzer-tabs">
+          <button class="atab active" data-tab="video">🎬 Video</button>
+          <button class="atab" data-tab="audio">🎤 Audio</button>
+          <button class="atab" data-tab="text">📝 Text</button>
+        </div>
+        <div class="analyzer-upload-zone">
+          <div class="upload-icon">🎬</div>
+          <p class="upload-title">Drop your speech recording here</p>
+          <p class="upload-sub">MP4, MOV, MP3, WAV — up to 2 GB</p>
+          <button class="btn btn-outline-dark upload-btn">Browse Files</button>
+          <div class="upload-divider">or try a demo</div>
+          <button class="btn btn-primary analyze-demo-btn" id="analyzeDemoBtn">▶ Analyze Sample Speech</button>
+        </div>
+        <div class="analyzer-features-list">
+          <div class="afl-item"><span class="afl-dot green"></span>Filler word detection &amp; elimination plan</div>
+          <div class="afl-item"><span class="afl-dot blue"></span>Speaking pace &amp; rhythm analysis</div>
+          <div class="afl-item"><span class="afl-dot purple"></span>Vocal energy &amp; tone mapping</div>
+          <div class="afl-item"><span class="afl-dot orange"></span>Clarity &amp; structure scoring</div>
+          <div class="afl-item"><span class="afl-dot pink"></span>AI coach personalized feedback</div>
+          <div class="afl-item"><span class="afl-dot teal"></span>Progress tracking over time</div>
+        </div>
+      </div>
+
+      <!-- Right: Results -->
+      <div class="analyzer-results-panel" id="analyzerResultsPanel">
+        <div class="results-idle" id="resultsIdle">
+          <div class="idle-icon">📊</div>
+          <p>Your speech analysis will appear here</p>
+          <p class="idle-sub">Click "Analyze Sample Speech" to see a live demo</p>
+        </div>
+
+        <div class="results-active" id="resultsActive">
+          <div class="results-header">
+            <div class="results-title">
+              <span class="results-file">sample_keynote_5min.mp4</span>
+              <span class="results-badge">✓ Analysis Complete</span>
+            </div>
+            <div class="overall-score">
+              <span class="score-num" id="overallScore">0</span>
+              <span class="score-label">Speaker Score</span>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <div class="metric-header">
+                <span class="metric-icon">⚡</span>
+                <span class="metric-name">Speaking Pace</span>
+                <span class="metric-value" id="metricPace">—</span>
+              </div>
+              <div class="metric-bar"><div class="metric-fill pace-fill" id="paceFill"></div></div>
+              <span class="metric-note" id="paceNote"></span>
+            </div>
+            <div class="metric-item">
+              <div class="metric-header">
+                <span class="metric-icon">🎯</span>
+                <span class="metric-name">Clarity Score</span>
+                <span class="metric-value" id="metricClarity">—</span>
+              </div>
+              <div class="metric-bar"><div class="metric-fill clarity-fill" id="clarityFill"></div></div>
+              <span class="metric-note" id="clarityNote"></span>
+            </div>
+            <div class="metric-item">
+              <div class="metric-header">
+                <span class="metric-icon">🔥</span>
+                <span class="metric-name">Vocal Energy</span>
+                <span class="metric-value" id="metricEnergy">—</span>
+              </div>
+              <div class="metric-bar"><div class="metric-fill energy-fill" id="energyFill"></div></div>
+              <span class="metric-note" id="energyNote"></span>
+            </div>
+            <div class="metric-item">
+              <div class="metric-header">
+                <span class="metric-icon">📖</span>
+                <span class="metric-name">Vocab Richness</span>
+                <span class="metric-value" id="metricVocab">—</span>
+              </div>
+              <div class="metric-bar"><div class="metric-fill vocab-fill" id="vocabFill"></div></div>
+              <span class="metric-note" id="vocabNote"></span>
+            </div>
+          </div>
+
+          <div class="filler-panel">
+            <div class="filler-header">
+              <span class="filler-title">🤐 Filler Words Detected</span>
+              <span class="filler-total" id="fillerTotal">0 total</span>
+            </div>
+            <div class="filler-words" id="fillerWords"></div>
+          </div>
+
+          <div class="ai-coaching-panel">
+            <div class="coaching-header">
+              <span class="ai-pulse"></span>
+              <span>AI Coach Feedback</span>
+            </div>
+            <div class="coaching-items" id="coachingItems"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -462,6 +577,7 @@
           <li>✓ Speaker profile &amp; media kit</li>
           <li>✓ 5 event matches/month</li>
           <li>✓ 3 AI pitch drafts/month</li>
+          <li>✓ Speech Analyzer (3 analyses/mo)</li>
           <li>✓ Basic speech templates</li>
           <li>✓ Event organizer marketplace listing</li>
         </ul>
@@ -477,6 +593,7 @@
           <li>✓ Unlimited event matches</li>
           <li>✓ Unlimited AI pitch generation</li>
           <li>✓ Full AI Speech Builder</li>
+          <li>✓ Speech Analyzer (unlimited)</li>
           <li>✓ Video Coach (5 uploads/mo)</li>
           <li>✓ Brand Studio + social content</li>
           <li>✓ Expert speech bots access</li>
@@ -568,6 +685,7 @@
         </div>
         <div class="footer-col">
           <h5>For Speakers</h5>
+          <a href="#speech-analyzer">Speech Analyzer</a>
           <a href="#">Speech Builder</a>
           <a href="#">Event Matchmaking</a>
           <a href="#">Video Coach</a>
